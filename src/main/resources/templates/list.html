@@ -20,7 +20,7 @@
   <tr>
     <!-- TODO #2: Complete the View Jobs By Category Table. -->
     <td>
-      <a th:href="@{/list/jobs(column=all)}" th:text="All"></a>
+      <a th:href="@{/list/jobs?(column=all)}"> View All</a>
     </td>
  <!-- Feel free to remove or modify this element if necessary. -->
     <td th:each="category : ${tableChoices}">
@@ -30,23 +30,6 @@
         </li>
       </ul>
     </td>
-  </tr>
-</table>
-
-<table class="job-list">
-  <tr>
-    <th>Job Name</th>
-    <th>Employer</th>
-    <th>Location</th>
-    <th>Position Type</th>
-    <th>Skill</th>
-  </tr>
-  <tr th:each="job:${jobs}">
-    <td th:text="${job.name}"></td>
-    <td th:text="${job.employer.name}"></td>
-    <td th:text="${job.location.name}"></td>
-    <td th:text="${job.positionType.name}"></td>
-    <td th:text="${job.coreCompetency.name}"></td>
   </tr>
 </table>
 
