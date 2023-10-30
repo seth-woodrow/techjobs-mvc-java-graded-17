@@ -27,5 +27,37 @@
     </div>
 </div>
 
+<div th:fragment="search-results" th:block th:each="job : ${jobs}">
+    <table class="job-listing">
+
+        <tr>
+            <td>ID</td>
+            <td th:text="${job.Id.toString()}"></td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td th:text="${job.name.toString()}"></td>
+        </tr>
+        <tr>
+            <td>Employer</td>
+            <td th:text="${job.employer.toString()}"></td>
+        </tr>
+        <tr>
+            <td>Location</td>
+            <td th:text="${job.location.toString()}"></td>
+        </tr>
+        <tr>
+            <td>Position Type</td>
+            <td th:text="${job.positionType.toString()}"></td>
+        </tr>
+        <tr>
+            <td>Skill</td>
+            <td th:text="${job.coreCompetency.toString()}"></td>
+        </tr>
+
+    </table>
+    </th:block>
+
+</div>
 </body>
 </html>
